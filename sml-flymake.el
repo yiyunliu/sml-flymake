@@ -34,7 +34,7 @@
 		    (goto-char (point-min))
 		    (cl-loop
 		     while (search-forward-regexp
-			    "^.*:\\([0-9]+\\)\\.\\([0-9]+\\)-\\([0-9]+\\)\\.\\([0-9]+\\) Error: \\(.*\\)$"
+			    "^.*:\\([0-9]+\\)\\.\\([0-9]+\\).* Error: \\(.*\\)$"
 			    nil t)
 		     for msg = (match-string 5)
 		     for (beg . end) = (flymake-diag-region
