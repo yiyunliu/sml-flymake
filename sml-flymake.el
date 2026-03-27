@@ -36,7 +36,7 @@
 		     while (search-forward-regexp
 			    "^.*:\\([0-9]+\\)\\.\\([0-9]+\\).* Error: \\(.*\\)$"
 			    nil t)
-		     for msg = (match-string 5)
+		     for msg = (match-string 3)
 		     for (beg . end) = (flymake-diag-region
 							source
 							(string-to-number (match-string 1))
